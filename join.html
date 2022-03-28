@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="joinstyle.css">
+    <title>Join</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Geeks Icon 2.png" alt="GeeksforGeeks LPU Chapter" width="75px" height="75px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="button1">Home</a></li>
+                    <li><a href="blog.html" class="button1">Blog</a></li>
+                    <li><a href="aboutus.html" class="button1">About</a></li>
+                    <li><a href="contact.html" class="button1">Contact</a></li>
+                    <li><a href="events.html" class="button1">Events</a></li>
+                    <li><a href="join.html" class="button1">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <div class="container">
+        <div class="title">
+            <h1>Registration Form</h1>
+        </div>
+        <form method="POST" name="google-sheet">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Name</span>
+                    <input type="text" name="Name" value="" placeholder="Enter Your Full Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="Email" value="" placeholder="Enter Your Email Address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contact Number</span>
+                    <input type="tel" name="Contact" value="" placeholder="Enter Your Contact Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Stream</span>
+                    <input type="text" name="Stream" value="" placeholder="Enter Your Stream Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Current Year of Study</span>
+                    <input type="text" name="Current-Year" value="" placeholder="Enter Your Current Year" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Passing Year</span>
+                    <input type="number" name="Passing-Year" value="" placeholder="Enter Your Passing Year" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Field of Expertise</span>
+                    <input type="text" name="Field" value="" placeholder="Enter Your Field of Expertise" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Why Do You Wish To Join This Community?</span>
+                    <input type="text" name="Reason" value="" placeholder="Enter Your Reason" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Have You Been a Part Of a Community Before? If Yes, Specify Position And Responsibilities</span>
+                    <input type="text" name="Experience" value="" placeholder="Experience" required>
+                </div>
+            </div>
+            <div class="work">
+                <input type="radio" name="Department" id="w1" value="Anchoring">
+                <input type="radio" name="Department" id="w2" value="Content Writing">
+                <input type="radio" name="Department" id="w3" value="Event Management and Co-ordination">
+                <input type="radio" name="Department" id="w4" value="Graphic Designing and Video Editing">
+                <input type="radio" name="Department" id="w5" value="Marketing and Sponsorship">
+                <input type="radio" name="Department" id="w6" value="Human Resource Management">
+                <input type="radio" name="Department" id="w7" value="Public Relations Management">
+                <input type="radio" name="Department" id="w8" value="Web Development">
+                <input type="radio" name="Department" id="w9" value="DSA Speakers and Co-ordinators">
+                <span class="work-title">Which Department Do You Wish To Work In</span>
+                <div class="category">
+                    <label for="w1">
+                        <span class="dot one"></span>
+                        <span class="department">Anchoring</span>
+                    </label>
+                    <label for="w2">
+                        <span class="dot two"></span>
+                        <span class="department">Content Writing</span>
+                    </label>
+                    <label for="w3">
+                        <span class="dot three"></span>
+                        <span class="department">Event Management and Co-ordination</span> <br>
+                    </label>
+                    <label for="w4">
+                        <span class="dot four"></span>
+                        <span class="department">Graphic Designing and Video Editing</span>
+                    </label>
+                    <label for="w5">
+                        <span class="dot five"></span>
+                        <span class="department">Marketing and Sponsorship</span>
+                    </label>
+                    <label for="w6">
+                        <span class="dot six"></span>
+                        <span class="department">Human Resource Management</span>
+                    </label>
+                    <label for="w7">
+                        <span class="dot seven"></span>
+                        <span class="department">Public Relations Management</span>
+                    </label>
+                    <label for="w8">
+                        <span class="dot eight"></span>
+                        <span class="department">Web Development</span>
+                    </label>
+                    <label for="w9">
+                        <span class="dot nine"></span>
+                        <span class="department">DSA Speakers and Co-ordinators</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" name="submit" value="Register">
+            </div>
+        </form>
+    </div>
+    <div class="rights">
+        <p>Copyright &copy; GeeksForGeeks LPU. All Rights Reserved | Gmail: geeksforgeeks.lpu@gmail.com </p>
+    </div>
+    <div class="grey-bar"></div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxxHowTfXQWHUxg_C7HPON7GBn1TVIW0QxFkvpBbC2G93Z-Pv0wKOzM3Z_Dqz3vRTzE/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Your Registration is Successful! We Will Contact You Soon."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

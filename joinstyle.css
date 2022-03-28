@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    opacity: 100%;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: #131417;
+    position: absolute;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    background: #2C2C2C;
+    padding: 0px 22px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+.logo img{
+    transition: 0.8s ease-in-out;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.logo img:hover{
+    transform: scale(1.12) rotate(360deg);
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul .button1{
+    display: inline-block;
+    margin: 10px 15px;
+    box-shadow: 4px 4px 5.5px #131417;
+    transition: 0.3s;
+    cursor: pointer;
+}
+nav ul .button1:hover{
+    color: #ffffff;
+}
+.button1:hover{
+    background-color: #308D46;
+}
+.button1
+{
+  background-color: #2A2A2C;
+  border: none;
+  color: #308D46;
+  border: 1px solid #308D46;
+  font-family: 'Poppins',sans-serif;
+  padding: 7px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15.5px;
+  margin: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container {
+    max-width: 850px;
+    width: 100%;
+    background-color: #2C2C2C;
+    padding: 25px 30px;
+}
+
+.container .title {
+    font-size: 27px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    position: relative;
+    /* padding-bottom: 35px; */
+}
+.container form .user-details {
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    justify-content: space-between;
+    margin: 30px 0 15px 0;
+}
+form .user-details .input-box {
+    margin-bottom: 35px;
+    width: 100%;
+    /* margin: 30px 0 15px 0; */
+}
+form .user-details .input-box .details {
+    color: white;
+    font-weight: 500px;
+    font-size: 23px;
+    margin-bottom: 5px;
+    display: block;
+}
+form .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 7px;
+    /* border:3px solid orange; */
+    padding-left: 25px;
+    font-size: 18px;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: orange;
+}
+form .work .work-title{
+    color: white;
+    font-weight: 500px;
+    font-size: 23px;
+}
+
+form .work .category{
+    width: 80%;
+    /* display: flex; */
+    justify-content: space-between;
+    margin: 14px 0;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    color: white;
+}
+.work .category label{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-left: 15px;
+}
+.work .category .dot{
+    height: 18px;
+    width: 18px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.4s ease;
+}
+#w1:checked ~ .category label .one,
+#w2:checked ~ .category label .two,
+#w3:checked ~ .category label .three,
+#w4:checked ~ .category label .four,
+#w5:checked ~ .category label .five,
+#w6:checked ~ .category label .six,
+#w7:checked ~ .category label .seven,
+#w8:checked ~ .category label .eight,
+#w9:checked ~ .category label .nine{
+    border-color: blue;
+    background: white;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    width: 50%;
+    margin: 45px 25%;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #000000;
+    background: white;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+form .button input:hover{
+    color: black;
+    background-color: #308D46 ;
+}
+
+@media (max-width: 2000px)
+{
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom: 35px;
+        width: 100%;
+        /* margin: 30px 0 15px 0; */
+    }
+    form .work .category{
+        width: 100%;
+    }
+}
+.grey-bar{
+    height: 3vh;
+    background: #2C2C2C;
+}
+.rights{
+    background-color: #308d46;
+    color: white;
+    height: 10vh;
+    margin: 0px;
+    line-height: 5vh;
+    text-align: center;
+}
+.rights p{
+    padding-top: 18px;
+    font-size: 15px;
+}
